@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#101116">
+  <meta name="description" content="A little birthday universe made just for you.">
+
+  <title>For Bakloli ✦</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/countdown.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/effect.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <!-- PASSWORD SCREEN -->
+  <main id="passwordScreen" class="screen">
+    <div class="login-decorations" aria-hidden="true">
+      <span class="sticker sticker-flower">✿</span>
+      <span class="sticker sticker-star">✧</span>
+      <span class="sticker sticker-heart">♡</span>
+      <span class="sticker sticker-sparkle">✳</span>
+      <span class="sticker sticker-sparkle">🧸</span>
+      <span class="sticker sticker-sparkle">🐻</span>
+      <span class="sticker sticker-sparkle">🐼</span>
+      <span class="sticker sticker-note">made with love</span>
+    </div>
+    <section class="gate-card">
+      <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+
+      <div class="moon-icon" aria-hidden="true">✦</div>
+
+      <h1>You've found<br><em>your little universe.</em></h1>
+
+      <p class="muted">
+        Some things are meant for one person only.
+      </p>
+
+      <form id="passwordForm">
+        <label for="passwordInput">A little secret first</label>
+
+        <div class="password-field">
+          <input id="passwordInput" type="password" placeholder="Enter the secret" autocomplete="current-password"
+            required>
+
+          <button id="togglePassword" class="password-toggle" type="button" aria-label="Show password"
+            aria-pressed="false">
+            <svg class="eye-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor"
+              stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </button>
+        </div>
+
+        <button class="button button-primary" type="submit">
+          Unlock my universe <span>↗</span>
+        </button>
+
+        <p id="passwordError" class="error-message" aria-live="polite"></p>
+      </form>
+
+      <p class="tiny-note">A tiny surprise, made with care.</p>
+    </section>
+  </main>
+
+  <!-- COUNTDOWN SCREEN -->
+  <section id="countdownScreen" class="screen hidden">
+    <div class="countdown-content">
+      <p class="eyebrow">SOMETHING SPECIAL IS ALMOST HERE</p>
+
+      <h1>Until your day,<br><em>my Bakloli.</em></h1>
+
+      <p class="muted">
+        A little universe is waiting to open for you.
+      </p>
+
+      <div class="countdown-grid" aria-label="Birthday countdown">
+        <div class="time-card">
+          <span id="days">00</span>
+          <small>DAYS</small>
+        </div>
+
+        <div class="time-card">
+          <span id="hours">00</span>
+          <small>HOURS</small>
+        </div>
+
+        <div class="time-card">
+          <span id="minutes">00</span>
+          <small>MINUTES</small>
+        </div>
+
+        <div class="time-card">
+          <span id="seconds">00</span>
+          <small>SECONDS</small>
+        </div>
+      </div>
+
+      <p class="countdown-footer">
+        ✦ Made for your moment ✦
+      </p>
+    </div>
+  </section>
+
+  <!-- BIRTHDAY WEBSITE -->
+  <div id="birthdaySite" class="hidden">
+  
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Makku's birthday home">
+        Makku<span>✦</span>
+      </a>
+
+      <nav class="header-navigation" aria-label="Main navigation">
+        <a href="#story">A little note</a>
+        <a href="#memories">Memories</a>
+        <a href="#song">Your song</a>
+        <a href="#secretLetter" class="secret-nav-link">
+          Secret letter <span aria-hidden="true">♡</span>
+        </a>
+
+
+        <button id="headerSongToggle" class="header-song-toggle" type="button" aria-label="Play birthday song"
+          aria-pressed="false">
+          <span id="headerSongIcon" aria-hidden="true">▶</span>
+          <span id="headerSongLabel">Play song</span>
+        </button>
+
+
+      </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero section-wrap">
+      <p class="eyebrow reveal">25 OCTOBER · YOUR DAY</p>
+
+      <h1 class="hero-title reveal">
+        Happy Birthday,<br>
+        <em>Bakloli.</em>
+      </h1>
+
+      <p class="hero-description reveal">
+        Today, the universe gets a little brighter
+        because you exist.
+      </p>
+
+      <a class="button button-primary reveal" href="#story">
+        There's something for you <span>↓</span>
+      </a>
+
+      <div class="hero-decoration" aria-hidden="true">✳</div>
+    </section>
+    <!-- BIRTHDAY CAKE / MAKE A WISH -->
+
+    <section id="birthdayCake" class="section-wrap cake-section">
+      <div class="cake-card reveal">
+        <p class="eyebrow">A LITTLE BIRTHDAY MAGIC</p>
+
+        <h2>Make a wish, <em>Makku!</em></h2>
+
+        <p class="muted cake-instruction" id="cakeInstruction">
+          Close your eyes, make a wish, and tap the cake. 🎂
+        </p>
+
+        <button type="button" class="cake-button" id="cakeButton" aria-label="Blow out the birthday candles">
+          <span class="cake-candles" aria-hidden="true">
+            <span class="cake-candle"><span class="candle-flame"></span></span>
+            <span class="cake-candle"><span class="candle-flame"></span></span>
+            <span class="cake-candle"><span class="candle-flame"></span></span>
+          </span>
+
+          <span class="cake-icing" aria-hidden="true"></span>
+          <span class="cake-layer cake-layer-top" aria-hidden="true"></span>
+          <span class="cake-layer cake-layer-bottom" aria-hidden="true"></span>
+          <span class="cake-plate" aria-hidden="true"></span>
+        </button>
+
+        <p id="cakeWishMessage" class="cake-wish-message" aria-live="polite">
+          Your wish is waiting to be made. ✨
+        </p>
+
+      </div>
+    </section>
+
+    <!-- PERSONAL LETTER -->
+    <section id="story" class="section-wrap letter-section">
+      <p class="eyebrow reveal">A NOTE FROM YOUR DUFFER</p>
+
+      <article class="letter-card reveal">
+        <span class="letter-mark" aria-hidden="true">“</span>
+
+        <h2>To my favourite <em>Bakloli,</em></h2>
+
+        <div class="letter-copy">
+          <p>
+            Happy Birthday, you little chaos machine. 💚
+          </p>
+
+          <p>
+            Some people enter our lives without any grand announcement,
+            yet somehow leave behind little moments that stay with us longer than expected.
+            And sometimes, the smallest beginnings lead to the sweetest surprises.
+          </p>
+
+          <p>
+            Today, I hope the world is extra gentle with you.
+            I hope you find beauty in the little things,
+            courage when life feels uncertain,
+            and happiness in places you never thought to look.
+
+            May this next chapter bring you beautiful beginnings, unexpected opportunities, peaceful days, and dreams
+            that slowly turn into reality.
+            May you always have the freedom to grow into the person you want to be, without ever feeling like you need
+            to be anyone else.
+          </p>
+
+          <p>
+            And whenever life gets a little overwhelming, I hope you remember that you don't have to have everything
+            figured out all at once. You're allowed to take your time, change your mind, start again, and become a new
+            version of yourself as many times as you need.
+          </p>
+
+          <p>
+            So here's to another year of becoming, discovering, laughing a little louder, dreaming a little bigger, and
+            collecting moments that make life worth remembering.
+          </p>
+
+          <p class="letter-signature">
+            With lots of love and care,<br>
+            <em>Your Duffer.</em> ✦
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- PHOTO + VIDEO GALLERY -->
+    <section id="memories" class="section-wrap memories-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">LITTLE PIECES OF YOU</p>
+
+        <h2>A gallery of <em>little moments.</em></h2>
+
+        <p class="muted">
+          A few moments, a few smiles, and a collection
+          of things worth remembering.
+        </p>
+      </div>
+
+      <div id="galleryGrid" class="gallery-grid">
+        <!-- gallery.js will insert the 35 photos and video -->
+      </div>
+
+      <dialog id="mediaDialog" class="media-dialog">
+        <button id="closeMedia" class="dialog-close" type="button" aria-label="Close media">✕</button>
+
+        <button id="previousMedia" class="dialog-nav dialog-previous" type="button"
+          aria-label="Previous media">←</button>
+
+        <div id="dialogMediaContent" class="dialog-media-content"></div>
+
+        <button id="nextMedia" class="dialog-nav dialog-next" type="button" aria-label="Next media">→</button>
+
+        <p id="mediaCounter" class="media-counter"></p>
+      </dialog>
+    </section>
+
+    <!-- SONG -->
+    <section id="song" class="section-wrap song-section">
+      <div class="song-card reveal">
+        <p class="eyebrow">MADE JUST FOR YOU</p>
+
+        <div class="music-symbol" aria-hidden="true">♫</div>
+
+        <h2>Your very own <em>birthday song.</em></h2>
+
+        <p class="muted">
+          Press play. This little melody belongs to your day.
+        </p>
+
+        <audio id="birthdaySong" preload="auto">
+          <source src="assets/audio/birthday-song.mp3" type="audio/mpeg">
+          Your browser does not support audio playback.
+        </audio>
+
+        <div class="player-controls">
+          <button id="playSong" class="button button-primary" type="button">▶ Play your song</button>
+
+          <button id="pauseSong" class="button button-secondary" type="button">Ⅱ Pause</button>
+        </div>
+
+        <p id="songStatus" class="tiny-note" aria-live="polite">
+          A song made with you in mind.
+        </p>
+      </div>
+    </section>
+    <!-- SECRET LETTER — AFTER THE SONG -->
+
+    <section id="secretLetter" class="section-wrap secret-letter-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">ONE LITTLE SECRET</p>
+        <h2>A little letter, <em>just for you.</em></h2>
+        <p class="muted">
+          Kuch baatein message mein nahi, dil se likhna zyada achha lagta hai. ♡
+        </p>
+      </div>
+
+      <button id="openEnvelope" class="envelope-button" type="button" aria-expanded="false"
+        aria-controls="handwrittenLetter">
+
+        
+        <span class="envelope" aria-hidden="true">
+          
+
+          
+          <span class="envelope-paper"></span>
+          <span class="envelope-body"></span>
+          <span class="envelope-flap"></span>
+          <span class="envelope-seal">♥</span>
+        </span>
+
+        <span class="envelope-caption">A little something from your Duffer</span>
+        <span class="envelope-hint">Tap on envelope 💌</span>
+
+      </button>
+
+      <article id="handwrittenLetter" class="handwritten-letter" hidden>
+        <div class="letter-paper">
+          <p class="letter-date">25 October · A little note for you</p>
+
+          <h3>Makkuuu, 🤍</h3>
+
+          <div class="handwritten-copy">
+            <p>
+              Happy Birthday, pagli! 🥹💗
+            </p>
+
+            <p>
+              Pata hai, kabhi-kabhi sochte hai ki ek random follow
+              aur ek simple se message se itna saara baat kaise shuru
+              ho gaya. Phir tera baklolipan,bakchodi, sath me mera bhi duffer-giri aur apna
+              pagalpan wala baat… aur dekh, aaj tere birthday ke liye
+              ye poori website bhi bana raha. jo bola tha tune 😂
+            </p>
+
+            <p>
+              Sach mein, I hope tera aane wala saal bahut achha ho.
+              Tera BA ka padhai achha chale, makeup ke kaam mein bhi
+              taraki hote rhe, aur tu apne dreams ke aur kareeb
+              jaaye. Jo bhi karna chahti hai, usmein tujhe confidence
+              mile aur tu khud par proud feel kare.
+            </p>
+
+            <p>
+              Aur moti, thora khud pe bbhi dhyan de apna khayal rakhna
+              bhi mat bhool. aur apne fast food pe lagam laga.
+              ik tu strong hai par phir bhi dhyan rakh aur jada badi bnne ki koshish mat kar
+              Har din perfect nahi hoga, par I hope
+              tere paas hamesha muskurane ki koi na koi wajah rahe.
+            </p>
+
+            <p>
+              Main koi badi-badi filmy baatein nahi karunga. Bas itna:
+              tu khush reh, apni bakchodi karti reh, aur life mein jo
+              achha deserve karti hai uske liye kabhi khud ko kam mat
+              samajhna. 🫶
+            </p>
+
+            <p>
+              Aur haan, aache se celebrate krna
+              aaj ke din cake ka bada piece tera…
+              lekin virtual wala mujhe bhi chahiye. 😂🎂
+              Aur jaldo mil thora height bhi napna hai dekhun to kitte bauni hai mere se😅
+            </p>
+          </div>
+
+          <p class="handwritten-signature">
+            Happy Birthday, Makku. ✨<br>
+            Tera Duffer 💌
+          </p>
+        </div>
+
+        <button id="closeEnvelope" class="button button-secondary" type="button">
+          Fold the letter away ♡
+        </button>
+        
+      </article>
+    </section>
+
+    <!-- FINAL WISH -->
+    <section class="final-section section-wrap">
+      <div class="final-content reveal">
+        <span class="final-star" aria-hidden="true">✳</span>
+
+        <p class="eyebrow">ONE LAST THING</p>
+
+        <h2>Keep shining,<br><em>beautiful soul.</em></h2>
+
+        <p class="muted">
+          May life surprise you with the kind of happiness
+          you never have to question.
+        </p>
+
+        <p class="final-signature">Forever cheering for you — Duffer ✦</p>
+        <p>Tumhara kutta hamesha bhokta rahega😂</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      Crafted with care, just for Bakloli. 💚
+    </footer>
+
+  </div>
+
+  <!-- PARTY EFFECT LAYER -->
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+</body>
+
+</html>
