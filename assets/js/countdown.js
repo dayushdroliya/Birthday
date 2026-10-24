@@ -9,7 +9,7 @@
 
     // 25 October 2026, 12:00 AM India Standard Time
     const REVEAL_AT = new Date(
-        "2026-10-25T00:00:00+05:30"
+        "2026-10-24T11:46:00+05:30"
     ).getTime();
     //const REVEAL_AT = 0; // TEMPORARY: testing mode
 
